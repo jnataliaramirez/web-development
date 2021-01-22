@@ -1,5 +1,134 @@
-h1 {
-  color: pink;
+:root {
+    /* Fonts */
+    --title-font    : 'Yusei Magic', sans-serif;
+    --body-font     : 'Poppins', sans-serif;
+    
+    /* Colors */
+    --primary-color     : hsl(335, 46%, 5%);
+    --primary-color-alt : hsl(335, 47%, 17%);
+    --text-color-white  : hsl(0, 0%, 92%); 
+    --text-color-black  : hsl(0,0%,0%); 
+    --body-bg-color     : hsl(0, 0%, 88%);
+    --color             : var(--primary-color);
+    --color-alt         : var(--primary-color-alt);
+
+    /* Font size */
+    --h1-font-size      : 2rem;
+    --h2-font-size      : 1.5rem;
+    --h3-font-size      : 1.25rem;
+    --h4-font-size      : 1.15rem;
+    --big-font-size     : 1.15rem;
+    --normal-font-size  : 1rem;
+    --small-font-size   : 0.75rem;
+    --smaller-font-size : 0.6875rem;
 }
 
-/*# sourceMappingURL=styles.css.map */
+body {
+    color           : var(--color);
+    font-family     : var(--text-color-black);
+    font-size       : var(--normal-font-size);
+    background-color: var(--body-bg-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top  : 0;
+  color       : var(--title-color);
+  font-family : var(--title-font);
+  font-weight : 800;
+}
+
+h1 {
+  font-size:  var(--h1-font-size);
+}
+
+h2 {
+  font-size : var(--h2-font-size);
+}
+
+h3 {
+  font-size : var(--h3-font-size);
+}
+
+h4 {
+  font-size : var(--h4-font-size);
+}
+
+.grid-body {
+    display             : grid;
+
+}
+
+.content-header {
+    background          : yellowgreen;
+    display             : grid;
+    /* grid-template-rows  : 300px 100px 50px; */
+}
+
+.title-header {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--title-font);
+
+}
+
+.text-header {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}
+
+.grid-main {
+    background: red;
+    display: grid;
+}
+
+.section-info {
+    background: pink;
+}
+
+.title-info {
+    text-align: center;
+}
+
+.content-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-services {
+    background: royalblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section-promo {
+    background: grey;
+    text-align: center;
+}
+
+.section-us {
+    background: wheat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-footer {
+    background: palevioletred;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
