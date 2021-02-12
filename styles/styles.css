@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     /* Fonts */
     --title-font    : 'Yusei Magic', sans-serif;
@@ -14,21 +19,19 @@
     /* --color-bottom      : hsl(0, 12%, 54%) */
 
     /* Font size */
-    --header-height         : 4rem;
-    --section-spacing       : 8rem;
-    --block-spacing         : 4rem;
-    --h1-font-size          : 3rem;
-    --h2-font-size          : 2rem;
-    --h3-font-size          : 1.5rem;
-    --h4-font-size          : 1.25rem;
-    --big-font-size         : 1.25rem;
-    --normal-font-size      : 1rem;
-    --small-font-size       : 0.875rem;
-    --smaller-font-size     : 0.75rem;
+    --h1-font-size      : 2rem;
+    --h2-font-size      : 1.5rem;
+    --h3-font-size      : 1.25rem;
+    --h4-font-size      : 1rem;
+    --big-font-size     : 1.15rem;
+    --normal-font-size  : 0.875rem;
+    --small-font-size   : 0.75rem;
+    --smaller-font-size : 0.6875rem;
+    
 }
 
 body {
-    /* color           : var(--color); */
+    color           : var(--color);
     font-family     : var(--text-color-black);
     font-size       : var(--normal-font-size);
     background-color: var(--body-bg-color);
@@ -83,15 +86,15 @@ h4 {
     text-align  : center;
     color       : var(--primary-color);
     font-family : var(--title-font);
-    margin      : 45px 20px 20px;
-    padding     : 30px;
+    margin      : 3rem 1rem 1rem;
+    padding     : 1rem;
 
 }
 
 .text-header {
     text-align  : center;
-    margin      : 30px ;
-    padding     : 20px 70px;
+    margin      : 2rem ;
+    padding     : 1.5rem 3rem;
     font-size   : var(--big-font-size) ;
 }
 
@@ -109,7 +112,7 @@ h4 {
     font-size       : var(--title-font) ;
     color           : var(--text-color-white);
     border          : 1px solid var(--color);
-    background-color: var(--color);
+    background      : var(--color);
 }
 
 .button-black:hover {
@@ -128,38 +131,76 @@ h4 {
 }
 
 .title-info {
-    text-align   : center;
-    padding      : 1rem ;
-    margin-bottom: 1rem ;
+    text-align : center;
+    padding    : 1rem 3rem 1rem ;
+    margin     : 0.5rem ;
+    line-height: 147%;
 
 }
 
 .content-info {
-    display                 : grid;
-    grid-template-columns   : 1fr 1fr;
-    grid-gap                : 0.5rem ;
-    overflow                : auto;
-    text-align              : center;
+    display    : grid;
+    overflow   : auto;
+    text-align : center;
+    margin     : 2rem;
 
 }
 
 .content-info-1 {
-    margin  : 1rem;
-    /* padding-left : 1rem; */
+    font-size : var(--big-font-size);
+    padding : 0.5rem 3rem 3.5rem;
+    text-align: center;
 
-}
-
-.content-info-2 {
-    margin  : 1rem;
-    /* padding-right : 10rem; */
 }
 
 
 .section-services {
-    background              : royalblue;
-    display                 : grid;
-    grid-template-columns   : 1fr 1fr 1fr;
+    background-color: var(--color);
 }
+
+.section-services .content-services{
+    display         : grid;
+    gap             : 2rem;
+    justify-content : center;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* grid-template-columns   : 1fr 1fr 1fr; para escritorio */
+}
+
+.content-services {
+    margin: 1.5rem;
+    background-color: var(--body-bg-color);
+
+}
+
+.image-container {
+    width          : 100%;
+    height         : 0;
+    padding-bottom : 56.25% ;
+    overflow       : hidden;
+    position       : relative;
+}
+
+.image-container img {
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    width      : 100%;
+    height     : 100%;
+    object-fit : cover;
+}
+
+.text-container {
+    text-align: center;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+
+}
+
+.text-container p {
+    padding: 2rem 2rem;
+    font-size: var(--big-font-size);
+}
+
 
 .section-promo {
     background  : grey;
