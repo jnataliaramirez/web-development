@@ -16,15 +16,17 @@
     --body-bg-color     : hsl(0, 0%, 88%);
     --color             : var(--primary-color);
     --color-alt         : var(--primary-color-alt);
+    --color-contact     : hsla(293, 52%, 21%, 0.445);
+    --color-proyect-by  : hsl(300, 100%, 40%);
     /* --color-bottom      : hsl(0, 12%, 54%) */
 
     /* Font size */
     --h1-font-size      : 2rem;
-    --h2-font-size      : 1.5rem;
-    --h3-font-size      : 1.25rem;
-    --h4-font-size      : 1rem;
+    --h2-font-size      : 1.65rem;
+    --h3-font-size      : 1.35rem;
+    --h4-font-size      : 1.25rem;
     --big-font-size     : 1.15rem;
-    --normal-font-size  : 0.875rem;
+    --normal-font-size  : 1.10rem;
     --small-font-size   : 0.75rem;
     --smaller-font-size : 0.6875rem;
     
@@ -32,7 +34,7 @@
 
 body {
     color           : var(--color);
-    font-family     : var(--text-color-black);
+    font-family     : var(--body-font);
     font-size       : var(--normal-font-size);
     background-color: var(--body-bg-color);
 }
@@ -74,33 +76,48 @@ h4 {
 }
 
 .grid-body {
-    display             : grid;
+    display : grid;
 }
 
 .content-header {
-    display             : grid;
+    display : grid;
 }
+
+.main-header {
+    position : relative;
+    z-index: 1;
+
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.1;
+}
+
 
 
 .title-header {
     text-align  : center;
     color       : var(--primary-color);
-    font-family : var(--title-font);
-    margin      : 3rem 1rem 1rem;
-    padding     : 1rem;
+    padding-top : 6rem;
 
 }
 
 .text-header {
     text-align  : center;
-    margin      : 2rem ;
     padding     : 1.5rem 3rem;
     font-size   : var(--big-font-size) ;
 }
 
 .button {
     text-align  : center;
-    margin      : 35px 50px 50px;
+    margin      : 1rem 2rem 1rem;
 }
 
 .button-black {
@@ -147,9 +164,8 @@ h4 {
 }
 
 .content-info-1 {
-    font-size : var(--big-font-size);
-    padding : 0.5rem 3rem 3.5rem;
-    text-align: center;
+    padding     : 0.5rem 3rem 3.5rem;
+    text-align  : center;
 
 }
 
@@ -162,12 +178,10 @@ h4 {
     display         : grid;
     gap             : 2rem;
     justify-content : center;
-    /* grid-template-rows: 1fr 1fr 1fr; */
-    /* grid-template-columns   : 1fr 1fr 1fr; para escritorio */
 }
 
 .content-services {
-    margin: 1.5rem;
+    margin          : 1.5rem;
     background-color: var(--body-bg-color);
 
 }
@@ -190,31 +204,71 @@ h4 {
 }
 
 .text-container {
-    text-align: center;
-    padding: 1rem 2rem;
-    letter-spacing: 1px;
+    text-align      : center;
+    padding         : 1rem 2rem;
+    letter-spacing  : 1px;    
 
 }
 
 .text-container p {
-    padding: 2rem 2rem;
-    font-size: var(--big-font-size);
+    padding     : 2rem 2rem;
 }
 
 
 .section-promo {
-    background  : grey;
+    padding     :2rem 2rem ;
     text-align  : center;
 }
 
-.section-us {
-    background              :wheat;
-    display                 :grid;
-    grid-template-columns   : 1fr 1fr;
+.section-promo h2 {
+    padding-bottom: 2rem ;
 }
 
+.section-promo p {
+    padding    : 1rem;
+}
+
+.section-us {
+    display            :grid;
+    grid-template-rows :1fr 1fr;
+}
+
+.content-us-1 {
+    background-color: var(--color-contact)
+}
+
+.content-us-2 {
+    background-color: var(--color-alt)
+}
+
+.content-us-1, .content-us-2 {
+    padding: 2rem 1.5rem 1rem;
+    text-align: center;
+
+}
+
+.content-us-1 h2, .content-us-2 h2{
+    padding-bottom  : 2rem;
+    text-align      : center;
+}
+
+.content-us-1 p, .content-us-2 p{
+    padding   : 0.5rem;
+    
+}
+
+
 .section-footer {
-    background              : palevioletred;
-    display                 : grid;
-    grid-template-columns   : 1fr 1fr;
+    background          : var(--color);
+    color               : white;
+    display             : grid;
+    grid-template-rows  : 1fr 1fr;
+    text-align          : center;
+    padding             : 2rem 0;
+    font-size           : var(--big-font-size);
+}
+
+
+.section-footer a {
+    color : var(--color-proyect-by);
 }
