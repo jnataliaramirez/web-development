@@ -5,8 +5,8 @@
 
 :root {
     /* Fonts */
-    --title-font    : 'Yusei Magic', sans-serif;
-    --body-font     : 'Poppins', sans-serif;
+    --title-font : 'Yusei Magic', sans-serif;
+    --body-font  : 'Poppins', sans-serif;
     
     /* Colors */
     --primary-color     : hsl(335, 46%, 5%);
@@ -64,15 +64,15 @@ h1 {
 }
 
 h2 {
-  font-size : var(--h2-font-size);
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size : var(--h3-font-size);
+  font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size : var(--h4-font-size);
+  font-size: var(--h4-font-size);
 }
 
 .grid-body {
@@ -85,19 +85,19 @@ h4 {
 
 .main-header {
     position : relative;
-    z-index: 1;
+    z-index  : 1;
 
 }
 
 .background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0.1;
+    position    : absolute;
+    left        : 0;
+    top         : 0;
+    width       : 100%;
+    height      : 100%;
+    object-fit  : cover;
+    z-index     : -1;
+    opacity     : 0.1;
 }
 
 
@@ -139,11 +139,11 @@ h4 {
 }
 
 .grid-main {
-    display     : grid;
+    display : grid;
 }
 
 .section-info {
-    background  : var(--color-alt);
+    background : var(--color-alt);
 
 }
 
@@ -187,11 +187,11 @@ h4 {
 }
 
 .image-container {
+    position       : relative;
+    overflow       : hidden;
     width          : 100%;
     height         : 0;
     padding-bottom : 56.25% ;
-    overflow       : hidden;
-    position       : relative;
 }
 
 .image-container img {
@@ -211,7 +211,7 @@ h4 {
 }
 
 .text-container p {
-    padding     : 2rem 2rem;
+    padding : 2rem 2rem;
 }
 
 
@@ -242,8 +242,8 @@ h4 {
 }
 
 .content-us-1, .content-us-2 {
-    padding: 2rem 1.5rem 1rem;
-    text-align: center;
+    padding     : 2rem 1.5rem 1rem;
+    text-align  : center;
 
 }
 
@@ -253,7 +253,7 @@ h4 {
 }
 
 .content-us-1 p, .content-us-2 p{
-    padding   : 0.5rem;
+    padding : 0.5rem;
     
 }
 
