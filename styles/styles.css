@@ -1,35 +1,51 @@
 * {
-    margin: 0;
+    margin : 0;
     padding: 0;
 }
 
 :root {
     /* Fonts */
-    --title-font : 'Yusei Magic', sans-serif;
-    --body-font  : 'Poppins', sans-serif;
-    
+    --title-font: 'Yusei Magic', sans-serif;
+    --body-font : 'Poppins', sans-serif;
+
     /* Colors */
-    --primary-color     : hsl(335, 46%, 5%);
-    --primary-color-alt : hsla(335, 24%, 24%, 0.308);
-    --text-color-white  : hsl(0, 0%, 92%); 
-    --text-color-black  : rgba(0, 0, 0, 0.746); 
-    --body-bg-color     : hsl(0, 0%, 88%);
-    --color             : var(--primary-color);
-    --color-alt         : var(--primary-color-alt);
-    --color-contact     : hsla(293, 52%, 21%, 0.445);
-    --color-proyect-by  : hsl(300, 100%, 40%);
+    --primary-color        : hsl(335, 46%, 5%);
+    --primary-color-alt    : hsla(335, 24%, 24%, 0.308);
+    --text-color-white     : hsl(0, 0%, 92%);
+    --text-color-black     : rgba(0, 0, 0, 0.746);
+    --body-bg-color        : hsl(0, 0%, 88%);
+    --color                : var(--primary-color);
+    --color-alt            : var(--primary-color-alt);
+    --color-contact        : hsla(293, 52%, 21%, 0.445);
+    --color-proyect-by     : hsl(300, 100%, 40%);
     /* --color-bottom      : hsl(0, 12%, 54%) */
 
     /* Font size */
-    --h1-font-size      : 2rem;
-    --h2-font-size      : 1.65rem;
-    --h3-font-size      : 1.35rem;
-    --h4-font-size      : 1.25rem;
-    --big-font-size     : 1.15rem;
-    --normal-font-size  : 1.10rem;
-    --small-font-size   : 0.75rem;
-    --smaller-font-size : 0.6875rem;
-    
+    --h1-font-size     : 2rem;
+    --h2-font-size     : 1.65rem;
+    --h3-font-size     : 1.35rem;
+    --h4-font-size     : 1.25rem;
+    --big-font-size    : 1.15rem;
+    --normal-font-size : 1rem;
+    --small-font-size  : 0.75rem;
+    --smaller-font-size: 0.6875rem;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*  Variables de tamaño en desktop  */
+    :root {
+        --h1-font-size     : 2.3rem;
+        --h2-font-size     : 2rem;
+        --h3-font-size     : 1.5rem;
+        --h4-font-size     : 1.35rem;
+        --big-font-size    : 1.25rem;
+        --normal-font-size : 1.10rem;
+        --small-font-size  : 0.875rem;
+        --smaller-font-size: 0.75rem;
+    }
+
 }
 
 body {
@@ -53,119 +69,150 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top  : 0;
-  color       : var(--color);
-  font-family : var(--title-font);
-  font-weight : 800;
+    margin-top : 0;
+    color      : var(--color);
+    font-family: var(--title-font);
+    font-weight: 800;
 }
 
 h1 {
-  font-size:  var(--h1-font-size);
+    font-size: var(--h1-font-size);
 }
 
 h2 {
-  font-size: var(--h2-font-size);
+    font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: var(--h3-font-size);
+    font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size: var(--h4-font-size);
+    font-size: var(--h4-font-size);
 }
 
 .grid-body {
-    display : grid;
+    display: grid;
 }
 
+/* Home */
+
 .content-header {
-    display : grid;
+    display       : grid;
+    padding-bottom: 2.5rem;
 }
 
 .main-header {
-    position : relative;
-    z-index  : 1;
+    position: relative;
+    z-index : 1;
 
 }
 
 .background {
-    position    : absolute;
-    left        : 0;
-    top         : 0;
-    width       : 100%;
-    height      : 100%;
-    object-fit  : cover;
-    z-index     : -1;
-    opacity     : 0.1;
+    position  : absolute;
+    left      : 0;
+    top       : 0;
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+    z-index   : -1;
+    opacity   : .2;
 }
-
 
 
 .title-header {
-    text-align  : center;
-    color       : var(--primary-color);
-    padding-top : 6rem;
-
+    text-align : center;
+    color      : var(--primary-color);
+    padding    : 6rem 3rem .1rem;
+    line-height: 1.5;
 }
 
 .text-header {
-    text-align  : center;
-    padding     : 1.5rem 3rem;
-    font-size   : var(--big-font-size) ;
+    text-align: center;
+    padding   : 1.5rem 3rem;
+    font-size : var(--big-font-size);
 }
 
 .button {
-    text-align  : center;
-    margin      : 1rem 2rem 1rem;
+    text-align: center;
+    margin    : 1rem 2rem 1rem;
 }
 
 .button-black {
-    display         : inline-block;
-    padding         : 0.85rem 1.5rem;
-    border-radius   : 0.5rem;
-    text-decoration : none;
-    font-weight     : 600;
-    font-size       : var(--title-font) ;
-    color           : var(--text-color-white);
-    border          : 1px solid var(--color);
-    background      : var(--color);
+    display        : inline-block;
+    padding        : 1rem 1.7rem;
+    border-color   : var(--text-color-white);
+    border-radius  : 0.5rem;
+    text-decoration: none;
+    font-weight    : 600;
+    font-size      : var(--normal-font-size);
+    color          : var(--text-color-white);
+    border         : 1px solid var(--color);
+    background     : var(--color);
 }
 
 .button-black:hover {
     background-color: var(--body-bg-color);
-    color           : var(--text-color-black) ;
+    color           : var(--text-color-black);
     box-shadow      : 0 0 16px var(--color);
 }
 
+@media screen and (min-width:1240px) {
+
+    .content-header {
+        padding-bottom: 8rem;
+    }
+
+    .title-header {
+        padding: 6rem 3rem 0rem;
+    }
+
+    .text-header {
+        padding  : 1rem 17rem;
+        font-size: var(--normal-font-size);
+    }
+
+    .button {
+        text-align: center;
+        margin-top: 1.8rem;
+    }
+
+    .button-black {
+        padding: 1.3rem 2.3rem;
+    }
+
+}
+
+/* Section Info */
+
 .grid-main {
-    display : grid;
+    display: grid;
 }
 
 .section-info {
-    background : var(--color-alt);
+    background: var(--color-alt);
 
 }
 
 .title-info {
     text-align : center;
-    padding    : 1rem 3rem 1rem ;
-    margin     : 0.5rem ;
+    padding    : 1rem 3rem 1rem;
+    margin     : 0.5rem;
     line-height: 147%;
 
 }
 
 .content-info {
-    display    : grid;
-    overflow   : auto;
-    text-align : center;
-    margin     : 2rem;
+    display   : grid;
+    overflow  : auto;
+    text-align: center;
+    margin    : 2rem;
 
 }
 
 .content-info-1 {
-    padding     : 0.5rem 3rem 3.5rem;
-    text-align  : center;
+    padding   : 0.5rem 3rem 3.5rem;
+    text-align: center;
 
 }
 
@@ -174,10 +221,10 @@ h4 {
     background-color: var(--color);
 }
 
-.section-services .content-services{
-    display         : grid;
-    gap             : 2rem;
-    justify-content : center;
+.section-services .content-services {
+    display        : grid;
+    gap            : 2rem;
+    justify-content: center;
 }
 
 .content-services {
@@ -187,50 +234,50 @@ h4 {
 }
 
 .image-container {
-    position       : relative;
-    overflow       : hidden;
-    width          : 100%;
-    height         : 0;
-    padding-bottom : 56.25% ;
+    position      : relative;
+    overflow      : hidden;
+    width         : 100%;
+    height        : 0;
+    padding-bottom: 56.25%;
 }
 
 .image-container img {
-    position   : absolute;
-    top        : 0;
-    left       : 0;
-    width      : 100%;
-    height     : 100%;
-    object-fit : cover;
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
 }
 
 .text-container {
-    text-align      : center;
-    padding         : 1rem 2rem;
-    letter-spacing  : 1px;    
+    text-align    : center;
+    padding       : 1rem 2rem;
+    letter-spacing: 1px;
 
 }
 
 .text-container p {
-    padding : 2rem 2rem;
+    padding: 2rem 2rem;
 }
 
 
 .section-promo {
-    padding     :2rem 2rem ;
-    text-align  : center;
+    padding   : 2rem 2rem;
+    text-align: center;
 }
 
 .section-promo h2 {
-    padding-bottom: 2rem ;
+    padding-bottom: 2rem;
 }
 
 .section-promo p {
-    padding    : 1rem;
+    padding: 1rem;
 }
 
 .section-us {
-    display            :grid;
-    grid-template-rows :1fr 1fr;
+    display           : grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .content-us-1 {
@@ -241,34 +288,37 @@ h4 {
     background-color: var(--color-alt)
 }
 
-.content-us-1, .content-us-2 {
-    padding     : 2rem 1.5rem 1rem;
-    text-align  : center;
+.content-us-1,
+.content-us-2 {
+    padding   : 2rem 1.5rem 1rem;
+    text-align: center;
 
 }
 
-.content-us-1 h2, .content-us-2 h2{
-    padding-bottom  : 2rem;
-    text-align      : center;
+.content-us-1 h2,
+.content-us-2 h2 {
+    padding-bottom: 2rem;
+    text-align    : center;
 }
 
-.content-us-1 p, .content-us-2 p{
-    padding : 0.5rem;
-    
+.content-us-1 p,
+.content-us-2 p {
+    padding: 0.5rem;
+
 }
 
 
 .section-footer {
-    background          : var(--color);
-    color               : white;
-    display             : grid;
-    grid-template-rows  : 1fr 1fr;
-    text-align          : center;
-    padding             : 2rem 0;
-    font-size           : var(--big-font-size);
+    background        : var(--color);
+    color             : white;
+    display           : grid;
+    grid-template-rows: 1fr 1fr;
+    text-align        : center;
+    padding           : 2rem 0;
+    font-size         : var(--big-font-size);
 }
 
 
 .section-footer a {
-    color : var(--color-proyect-by);
+    color: var(--color-proyect-by);
 }
