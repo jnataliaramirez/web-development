@@ -19,7 +19,19 @@
         <div class="button">
             <a href="/" class="button-black">Read More</a>
         </div>
-        <img class="background" src="/images/header-coding.jpg" alt="black screen with code">
+        <picture>
+            <source srcset="/images/header-coding.jpg" 
+                    media="(min-width: 1240px)"
+                    alt="black screen whith code">
+            <source srcset="/images/header-coding-webp.webp"
+                    alt="black screen whith code in an office"
+                    type="image/webp"
+                    media="(min-width:640px)">
+            <source srcset="/images/header-coding-2.jpg"
+                    alt="black screen whith code at a desk"
+                    media="(max-width: 640px)">
+            <img class="background" src="/images/header-coding.jpg" alt="black screen with code">
+        </picture>
     </div>
 </header>
 
