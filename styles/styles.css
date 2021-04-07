@@ -16,6 +16,7 @@
     --body-bg-color        : hsl(0, 0%, 88%);
     --color                : var(--primary-color);
     --color-alt            : var(--primary-color-alt);
+    --color-alt-services   : hsl(330, 2%, 21%);
     --color-contact        : hsla(293, 52%, 21%, 0.445);
     --color-proyect-by     : hsl(300, 100%, 40%);
     /* --color-bottom      : hsl(0, 12%, 54%) */
@@ -191,44 +192,56 @@ h4 {
 
 .section-info {
     background: var(--color-alt);
+    display   : grid;
+    padding    : 0.5rem 3rem 2.5rem;
 
 }
 
 .title-info {
     text-align : center;
-    padding    : 1rem 3rem 1rem;
-    margin     : 0.5rem;
+    padding-top: 2rem;
     line-height: 147%;
-
 }
 
 .content-info {
     display   : grid;
     overflow  : auto;
     text-align: center;
-    margin    : 2rem;
+    margin    : 1rem;
+    padding-top: 1rem;
 
 }
 
 .content-info-1 {
-    padding   : 0.5rem 3rem 3.5rem;
-    text-align: center;
+    text-align : center;
+    line-height: 147%;
+    font-size  : var(--big-font-size);
+
 
 }
+
+@media screen and (min-width:1024px) and (min-width:1200px) {
+
+    .content-info-1 {
+        display              : grid;
+        grid-template-columns: 3fr 3fr;
+        grid-gap             : 4rem;
+        padding-right        : 4rem;
+        padding-left         : 4rem;
+    }
+}
+
+/* Section Services */
 
 
 .section-services {
-    background-color: var(--color);
-}
-
-.section-services .content-services {
-    display        : grid;
-    gap            : 2rem;
-    justify-content: center;
+    background-color: var(--color-alt-services);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .content-services {
-    margin          : 1.5rem;
+    margin          : 2.5rem;
     background-color: var(--body-bg-color);
 
 }
@@ -259,6 +272,23 @@ h4 {
 
 .text-container p {
     padding: 2rem 2rem;
+    font-size: calc(var(--normal-font-size)*0.95)
+}
+
+.content-services-1 {
+    grid-row  : 1 / 2;
+}
+
+@media screen and (min-width:1024px) {
+
+    .section-services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: .2rem;
+        padding: 2.2rem 10rem ;
+    }
+
 }
 
 
@@ -286,6 +316,15 @@ h4 {
 
 .content-us-2 {
     background-color: var(--color-alt)
+}
+
+@media screen and (min-width:1024px) {
+
+    .section-us{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
 }
 
 .content-us-1,
@@ -321,4 +360,13 @@ h4 {
 
 .section-footer a {
     color: var(--color-proyect-by);
+}
+
+@media screen and (min-width:1024px) {
+
+    .section-footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
 }
