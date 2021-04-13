@@ -307,6 +307,9 @@ h4 {
 
 }
 
+
+/* Section promo */
+
 .section-promo {
     padding   : 2rem 2rem;
     text-align: center;
@@ -320,6 +323,14 @@ h4 {
     padding: 1rem;
 }
 
+@media screen and (min-width: 1024px) {
+    .section-promo {
+        padding: 4.5rem 17rem;
+    }
+}
+
+/* Section us and about our company */
+
 .section-us {
     display           : grid;
     grid-template-rows: 1fr 1fr;
@@ -331,15 +342,6 @@ h4 {
 
 .content-us-2 {
     background-color: var(--color-alt)
-}
-
-@media screen and (min-width:1024px) {
-
-    .section-us {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows   : 1fr;
-    }
-
 }
 
 .content-us-1,
@@ -358,6 +360,19 @@ h4 {
 .content-us-1 p,
 .content-us-2 p {
     padding: 0.5rem;
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .section-us {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows   : 1fr;
+    }
+
+    .content-us-1, .content-us-2 {
+        padding: 4.5rem 3.5rem 4.5rem;
+    }
 
 }
 
@@ -382,6 +397,7 @@ h4 {
     .section-footer {
         grid-template-columns: 1fr 1fr;
         grid-template-rows   : 1fr;
+        padding: 1.8rem;
     }
 
 }
