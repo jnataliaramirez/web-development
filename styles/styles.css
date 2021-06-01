@@ -220,7 +220,7 @@ h4 {
 
 }
 
-@media screen and (min-width:1024px) and (min-width:1200px) {
+@media screen and (min-width:1024px) {
 
     .content-info-1 {
         display              : grid;
